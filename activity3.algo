@@ -1,0 +1,36 @@
+ALGORITHM algorithm_name
+VAR
+//Declaration de variable
+    a: INTEGER; //nbr de caracter lkol
+    b: INTEGER; //space
+    c: INTEGER; //voyelle
+    sentence: STRING;
+BEGIN
+
+    a:=0;
+    b:=0;
+    c:=0;
+    //Read the sentence
+
+    Read (sentence);
+    For i From 0 To sentence.length STEP step DO
+    a=a+1;
+    IF (sentence[i]=" ") THEN
+    b=b+1;
+    END_IF
+    IF (sentence[i] = "a" OR sentence[i] = "e" OR sentence[i] = "i" OR sentence[i] = "o" OR sentence[i] = "u") THEN
+    c=c+1; 
+    END_IF
+    END_FOR
+    //lcaracter lmwjoudin lkol bch na7i mnhom gdch mn espace
+    a = a - b;
+    //Print the length of sentence (gedch mn caractere mn 8er espace)
+    Print(a);
+    Print("\n");
+    //Print gedch mn espace mwjoud 
+    Print(b);
+    Print("\n");
+    //Print gedch mn voyelle mwjoud
+    Print(c);
+    Print("\n");
+END
